@@ -8,7 +8,7 @@ public class Calcul
 {
 	private int operande1 = 0;
     private int operande2 = 0;
-    public void Calculs(int operande1, int operande2)
+    public Calcul(int operande1, int operande2)
     {
         this.operande1 = operande1;
         this.operande2 = operande2;

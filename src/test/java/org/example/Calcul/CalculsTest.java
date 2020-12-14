@@ -1,21 +1,30 @@
 package org.example.Calcul;
 
-import static org.junit.Assert.fail;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class CalculsTest {
-	
-    @Test
-    public void testMultiplier() {
 
+    private Calcul calculs = null;
+
+    @BeforeEach
+    public void setUp(){
+        calculs = new Calcul(2,4);
     }
 
     @Test
-    public void testAdditionnerFail() {
-    	if (5*2 != 654) {
-    		fail("CA MARCHE Po");
-    	}
+    public void testerMultipliser(){
+        int valMult = calculs.multiplier();
+
+        assertEquals(valMult, 8);
     }
 
+    @Test
+    public void testerAdditionner(){
+        int valAdd = calculs.additionner();
+
+        assertEquals(valAdd, 6);
+    }
 }
