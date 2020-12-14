@@ -7,24 +7,26 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class CalculsTest {
 
-    private Calcul calculs = null;
+	private Calcul calcul;
 
-    @BeforeEach
-    public void setUp(){
-        calculs = new Calcul(2,4);
-    }
+	@BeforeEach
+	public void setUp() {
+		calcul = new Calcul(2, 4);
+	}
 
-    @Test
-    public void testerMultipliser(){
-        int valMult = calculs.multiplier();
+	@Test
+	public void testerMultiplier() {
+		calcul = new Calcul(2, 4);
+		int valMult = calcul.multiplier();
 
-        assertEquals(valMult, 8);
-    }
+		assertEquals(valMult, 8);
+	}
 
-    @Test
-    public void testerAdditionner(){
-        int valAdd = calculs.additionner();
+	@Test
+	public void testerAdditionner() {
+		calcul = new Calcul(2, 4);
+		int valAdd = calcul.additionner();
 
-        assertEquals(valAdd, 6);
-    }
+		assertEquals(valAdd, 6);
+	}
 }
