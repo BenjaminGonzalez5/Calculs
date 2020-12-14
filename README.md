@@ -1,3 +1,0 @@
-# Calculs
-
-Test de Jenkins
